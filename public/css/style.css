@@ -1,0 +1,99 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#NavBar{
+    background-color: #F3EAF1;
+}
+
+#CartIcon{
+    position: relative;
+}
+
+#CartNotification{
+    position: absolute;
+    background: #ff6600;
+    height: 1.5em;
+    width: 1.5em;
+    top: 0.75em;
+    right: 7em;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 0.5em;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 991px) {
+    #CartNotification{
+        position: absolute;
+        background: #ff6600;
+        height: 1.5em;
+        width: 1.5em;
+        top: 0.75em;
+        left: 1.25em;
+        text-align: center;
+        line-height: 1.5em;
+        font-size: 0.5em;
+        border-radius: 50%;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+header{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#Oricamera_container,
+#Orifurniture_container,
+#Oriteddy_container{
+    margin-bottom: 5rem;
+}
+
+#Oricamera_title,
+#Orifurniture_title,
+#Oriteddy_title{
+    margin-left: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.Oricamera_list_button{
+    background-color:#6A5CA5;
+}
+
+.Orifurniture_list_button{
+    background-color:#D4813A;
+}
+
+.Oriteddy_list_button{
+    background-color: #A76BAA;
+}
+
+
+svg .transparent{
+    fill:none;
+}
+
+.index_svg{
+    display: inline;
+    height: 2.5em;
+}
+
+#Oriteddy_index_svg:hover path:not(.transparent){
+    fill: #A76BAA;
+}
+
+#Orifurniture_index_svg:hover path:not(.transparent){
+    fill: #D4813A;
+}
+
+#Oricamera_index_svg:hover path:not(.transparent){
+    fill: #6A5CA5;
+}
+
+#add-btn{
+    font-size: 1.4rem;
+}

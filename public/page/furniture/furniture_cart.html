@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Meta tags (requiered) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Informations -->
+    <title>Orifurniture, e-commerce</title>
+    <meta name="description" content="OriTeddy est une application de l'entreprise de commerce en ligne, Orinoco, présentant des applications thématiques ne vendant qu’un seul groupe de produits.">
+    <!-- Bootstrap Minified (version 4.3.1) - CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome Minified (version 5.15.2) - CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- Google Font: Open Sans (Designed by Steve Matteson) - CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- CSS style -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <nav id="NavBar" class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./furniture_list.html">
+                <img src="../../../images/logo/furniture/OriFurniture_logo--original.png" height="60" alt="Oricono logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a id="CartIcon" class="nav-link" href="./furniture_cart.html" title="voir mon panier"><i class="fas fa-shopping-cart mr-1"></i>Panier</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nos autres plateformes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="../../../index.html" title="revenir à l'accueil Orinoco">Orinoco</a>
+                            <a class="dropdown-item" href="../camera/camera_list.html">Ori<strong>camera</strong></a>
+                            <a class="dropdown-item" href="../teddy/teddy_list.html">Ori<strong>teddy</strong></a>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header id="OrifurnitureEmptyCart" class="container text-center">
+        <h2>Votre panier est vide.</h2>
+    </header>
+    <main id="OrifurnitureCartContent" class="p-4 mt-4 mb-4 container shadow">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="h2">Contenu de votre panier Orifurniture:</h1>
+            </div>
+        </div>
+        <table class="table table-striped mt-4 mb-4">
+            <thead>
+                <tr>
+                    <th scope="col" class="d-none d-sm-table-cell">Image</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col" class="d-none d-sm-table-cell">Option</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col" class="text-center">Quantité</th>
+                    <th scope="col" class="text-center">
+                        <i title="Supprimer l'article du panier" class="far fa-trash-alt"></i>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="OrifurnitureCartItems">
+            </tbody>
+        </table>
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-md-6 mb-4">
+                <h2 class="h4 pb-2">Total de votre panier (TTC):</h2>
+                <p id="OrifurnitureTotalPrice" class="h3 font-weight-bold mb-4">0€</p>
+                <button id="OrifurnitureClearCart" class="btn btn-outline-danger">Annuler votre panier</button>
+        </div>
+    </main>
+    <section class="p-4 mt-4 mb-4 container" id="OrifurnitureForm">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-12 col-md-6">
+                <h2 class="h4">
+                    Pour valider votre commande, merci de remplir <em>TOUS</em> les champs ci-dessous:
+                </h2>
+            </div>
+        </div>
+        <form class="p-4">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputClientLastName">Nom</label>
+                    <input type="text" class="form-control" id="inputClientLastName" placeholder="Pauer" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputClientFirstName">Prénom</label>
+                    <input type="text" class="form-control" id="inputClientFirstName" placeholder="Sebald" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputClientAddress">Adresse</label>
+                    <input type="text" class="form-control" id="inputClientAddress" placeholder="58, place du cordonnier" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputClientCity">Ville</label>
+                    <input type="text" class="form-control" id="inputClientCity" placeholder="Lyon" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputClientEmail">E-mail</label>
+                <input type="email" class="form-control" id="inputClientEmail" placeholder="sebald.pauer@exemple.com" required>
+            </div>
+            <div class="form-row d-flex justify-content-center mt-4">
+                <button id="SubmitOrder" type="submit" class="mt-2 btn btn-success btn-lg text-light">
+                    Valider ma commande
+                </button>
+            </div>
+        </form>
+    </section>
+    <!-- Function for managing the shopping cart -->
+    <script src="../../js/function/function_cart.js"></script>
+    <!-- Function CartIcon Notification in NavBar -->
+    <script src="../../js/function/global_cartNotification.js"></script>
+    <!-- Use of functions above-->
+    <script src="../../js/_furniture/furniture_cart.js"></script>
+    <!-- Bootstrap Minified (version 4.3.1) - JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous" defer></script>
+    <!-- Font Awesome Minified (version 5.15.2) - JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"
+        integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw=="
+        crossorigin="anonymous"></script>
+</body>
+</html>

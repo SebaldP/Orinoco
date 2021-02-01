@@ -1,0 +1,1 @@
+confirmation_Ori("teddy", "http://localhost:3000/api/teddies/order");
